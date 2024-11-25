@@ -1,0 +1,126 @@
+/* กำหนดพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    transition: background-color 0.5s ease; /* เพิ่ม transition ให้กับการเปลี่ยนพื้นหลัง */
+}
+
+/* Navbar */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    transition: background-color 0.5s ease; /* เพิ่ม transition สำหรับ navbar */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* เพิ่ม transition สำหรับลิงก์ใน navbar */
+}
+
+header nav ul li a:hover {
+    color: #009688; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* ส่วนเนื้อหา */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    transition: background-color 0.5s ease; /* เพิ่ม transition สำหรับการเปลี่ยนพื้นหลัง */
+}
+
+#home {
+    background-color: #009688;
+    color: white;
+}
+
+#lessons {
+    background-color: #ffffff;
+    color: #333;
+}
+
+#quiz {
+    background-color: #e0f7fa;
+}
+
+#contact {
+    background-color: #ffebee;
+}
+
+/* ปุ่ม */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* เพิ่ม transition สำหรับการเปลี่ยนสีของปุ่ม */
+}
+
+.btn:hover {
+    background-color: #004d40; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* แบบฟอร์ม */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    transition: border-color 0.3s ease; /* เพิ่ม transition สำหรับกรอบของ input */
+}
+
+form input:focus {
+    border-color: #34087c; /* เปลี่ยนสีกรอบเมื่อคลิก */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* เพิ่ม transition สำหรับปุ่ม */
+}
+
+form button:hover {
+    background-color: #004d40; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.5s ease; /* เพิ่ม transition ให้กับพื้นหลังของ footer */
+}
+
+footer:hover {
+    background-color: #222; /* เปลี่ยนสีเมื่อ hover */
+}

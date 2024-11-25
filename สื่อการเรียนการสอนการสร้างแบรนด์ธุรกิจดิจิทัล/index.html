@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การสร้างแบรนด์ธุรกิจดิจิทัล</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="Script" href="Script.js">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#lessons">บทเรียน</a></li>
+                <li><a href="#quiz">แบบทดสอบ</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- หน้าแรก -->
+    <section id="home">
+        <h1>การสร้างแบรนด์ธุรกิจดิจิทัล</h1>
+        <p>เรียนรู้วิธีการสร้างแบรนด์ที่แข็งแกร่งในโลกดิจิทัล พร้อมกับกลยุทธ์ที่สามารถนำไปใช้ได้จริง!</p>
+        <a href="#lessons" class="btn">เริ่มเรียนตอนนี้</a>
+    </section>
+
+    <!-- บทเรียน -->
+    <section id="lessons">
+        <h2>บทเรียนที่ 1: การสร้างแบรนด์ในยุคดิจิทัล</h2>
+        <p>เรียนรู้การสร้างแบรนด์ดิจิทัล และสิ่งที่คุณต้องทำเพื่อให้แบรนด์ของคุณเป็นที่รู้จักในโลกออนไลน์</p>
+        <ul>
+            <li>การตั้งชื่อแบรนด์</li>
+            <li>การออกแบบโลโก้</li>
+            <li>การใช้สื่อโซเชียลมีเดียเพื่อโปรโมตแบรนด์</li>
+            <li>การสร้างประสบการณ์ให้กับลูกค้า</li>
+        </ul>
+        <a href="#quiz" class="btn">ทดสอบความรู้ของคุณ</a>
+    </section>
+
+    <!-- แบบทดสอบ -->
+    <section id="quiz">
+        <h2>แบบทดสอบการสร้างแบรนด์</h2>
+        <form id="quizForm">
+            <label for="q1">1. การสร้างชื่อแบรนด์ที่ดีควรมีคุณสมบัติใด?</label>
+            <input type="text" id="q1" name="q1" required=""><br>
+        
+            <label for="q2">2. แพลตฟอร์มใดที่เหมาะสำหรับการโปรโมตแบรนด์ดิจิทัล?</label>
+            <input type="text" id="q2" name="q2" required=""><br>
+        
+            <button type="submit">ส่งคำตอบ</button>
+        </form>
+        
+        <div id="result"></div>
+        
+        <script>
+        // กำหนดคำตอบที่ถูกต้อง
+        const correctAnswers = {
+            q1: "ความจำง่าย",  // คำตอบที่ถูกต้องสำหรับคำถามที่ 1
+            q2: "Facebook"      // คำตอบที่ถูกต้องสำหรับคำถามที่ 2
+        };
+        
+        // การจับเหตุการณ์การส่งฟอร์ม
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // ป้องกันไม่ให้ฟอร์มส่งข้อมูลโดยตรง
+        
+            // ดึงคำตอบจากฟอร์ม
+            const q1Answer = document.getElementById('q1').value.trim();
+            const q2Answer = document.getElementById('q2').value.trim();
+        
+            // ตรวจสอบคำตอบ
+            let resultMessage = "<h3>ผลการตอบคำถาม</h3>";
+            let correctCount = 0;
+        
+            if (q1Answer.toLowerCase() === correctAnswers.q1.toLowerCase()) {
+                resultMessage += "<p>คำถามที่ 1: ตอบถูก!</p>";
+                correctCount++;
+            } else {
+                resultMessage += "<p>คำถามที่ 1: ตอบผิด! คำตอบที่ถูกต้องคือ " + correctAnswers.q1 + ".</p>";
+            }
+        
+            if (q2Answer.toLowerCase() === correctAnswers.q2.toLowerCase()) {
+                resultMessage += "<p>คำถามที่ 2: ตอบถูก!</p>";
+                correctCount++;
+            } else {
+                resultMessage += "<p>คำถามที่ 2: ตอบผิด! คำตอบที่ถูกต้องคือ " + correctAnswers.q2 + ".</p>";
+            }
+        
+            // แสดงผลลัพธ์
+            if (correctCount === 2) {
+                resultMessage += "<p>คุณตอบถูกทั้งหมด! ยอดเยี่ยม!</p>";
+            } else {
+                resultMessage += "<p>คุณตอบถูก " + correctCount + " ข้อจากทั้งหมด 2 ข้อ</p>";
+            }
+        
+            // แสดงผลลัพธ์บนหน้าเว็บ
+            document.getElementById('result').innerHTML = resultMessage;
+        });
+        </script>
+        
+    </section>
+
+    <!-- ติดต่อ -->
+    <section id="contact">
+        <h2>ติดต่อเรา</h2>
+        <p>หากคุณมีคำถามหรือข้อสงสัยเกี่ยวกับการสร้างแบรนด์ธุรกิจดิจิทัล ติดต่อเราได้ที่:</p>
+        <p>Email: @Digital business technology Phannanikhom.com</p>
+        <p>โทร: 012-345-6789</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 การสร้างแบรนด์ธุรกิจดิจิทัล | สงวนลิขสิทธิ์</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
